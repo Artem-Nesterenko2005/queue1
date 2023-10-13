@@ -5,5 +5,6 @@
 int main()
 {
     Queue* queue = malloc(sizeof(Queue));
-    printf("PABEDA");
+    QueueElem* elem = malloc(sizeof(QueueElem));
+    enqueue(&queue, elem);
 }

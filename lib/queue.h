@@ -21,7 +21,7 @@ struct Queue
 typedef struct Queue Queue;
 
 //adds an item to the end of the queue
-int enqueue();
+int enqueue(Queue **queue, QueueElem *elem);
 
 //removes the first item from the queue and returns its value
 int dequeue();
