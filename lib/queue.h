@@ -3,20 +3,10 @@
 #define HEADER_H
 
 //queue element
-typedef struct QueueElem
-{
-    int value;
-    QueueElem *next;
-    QueueElem *previous;
-} QueueElem;
+typedef struct QueueElem;
 
 //queue
-typedef struct Queue
-{
-    QueueElem end;
-    QueueElem head;
-    
-} Queue;
+typedef struct Queue;
 
 //adds an item to the end of the queue
 int enqueue();
