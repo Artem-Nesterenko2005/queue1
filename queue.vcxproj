@@ -119,11 +119,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="lib\queue.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="queue.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="queue.h" />
+    <ClInclude Include="lib\queue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
