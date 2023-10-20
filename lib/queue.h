@@ -37,3 +37,6 @@ int back(Queue *head);
 
 //outputs a queue
 void printQueue();
+
+//create queue structure
+Queue* createQueue();
