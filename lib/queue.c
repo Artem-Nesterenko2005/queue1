@@ -2,17 +2,31 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+struct Queue
+{
+    struct QueueElem* end;
+    struct QueueElem* head;
+};
+
+typedef struct QueueElem
+{
+    int value;
+    struct QueueElem* next;
+} QueueElem;
+
 Queue *createQueue()
 {
-    Queue* queue = malloc(sizeof(Queue));
-    queue->end = NULL;
-    queue->head = NULL;
+    Queue* queue = calloc(1, sizeof(Queue));
     return queue;
 }
 
 int enqueue(Queue** queue, int value)
 {
     QueueElem* queueElem = malloc(sizeof(QueueElem));
+    if (queueElem == NULL)
+    {
+        return -1;
+    }
     queueElem->value = value;
     queueElem->next = NULL;
     if ((*queue)->end == NULL)
@@ -25,6 +39,7 @@ int enqueue(Queue** queue, int value)
         (*queue)->head->next = queueElem;
         (*queue)->head = queueElem;
     }
+    return 0;
 }
 
 void dequeue(Queue** queue)
