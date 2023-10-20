@@ -24,10 +24,10 @@ int enqueue(Queue** queue, int value);
 int dequeue();
 
 //checks if the queue is empty
-bool isEmpty();
+bool isEmpty(Queue *queue);
 
 //deletes a queue
-void deleteQueue();
+void deleteQueue(Queue *queue);
 
 //returns the value of the top element
 int front(Queue *tail);

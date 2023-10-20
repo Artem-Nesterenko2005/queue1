@@ -1,4 +1,5 @@
 #include "queue.h"
+#include <stdbool.h>
 #include <stdlib.h>
 
 int enqueue(Queue** queue, int value)
@@ -23,7 +24,7 @@ int front(Queue* queue)
     return queue->end->value;
 }
 
-int front(Queue* queue)
+int back(Queue* queue)
 {
     if (queue == NULL)
     {
@@ -34,4 +35,21 @@ int front(Queue* queue)
         return;
     }
     return queue->end->value;
+}
+
+bool isEmpty(Queue* queue)
+{
+    if (queue->end = NULL)
+    {
+        return true;
+    }
+    return false;
+}
+
+void deleteQueue(Queue* queue)
+{
+    while (queue != NULL)
+    {
+        dequeue(queue);
+    }
 }
