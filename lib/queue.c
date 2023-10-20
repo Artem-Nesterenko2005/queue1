@@ -11,7 +11,7 @@ int enqueue(Queue** queue, int value)
     (*queue)->head = queueElem;
 }
 
-int dequeue(Queue** queue)
+void dequeue(Queue** queue)
 {
     if (*queue == NULL)
     {
@@ -19,7 +19,11 @@ int dequeue(Queue** queue)
     }
     QueueElem* ptr = (*queue)->end;
     (*queue)->end = ptr->next;
-    return ptr->value;
+    free(ptr);
+    if ((*queue)->end == NULL)
+    {
+        (*queue) == NULL;
+    }
 }
 
 int front(Queue* queue)
