@@ -8,7 +8,6 @@ struct QueueElem
 {
     int value;
     struct QueueElem* next;
-    struct QueueElem* previous;
 };
 typedef struct QueueElem QueueElem;
 
@@ -27,10 +26,10 @@ int enqueue(Queue **queue, QueueElem *elem);
 int dequeue();
 
 //checks if the queue is empty
-bool isEmpty();
+bool isEmpty(Queue *queue);
 
 //deletes a queue
-void deleteQueue();
+void deleteQueue(Queue *queue);
 
 //returns the value of the top element
 int front();

@@ -1,7 +1,21 @@
 #include "queue.h"
 #include <stdio.h>
+#include <stdbool.h>
 
-int enqueue(Queue** queue, QueueElem* elem)
+bool isEmpty(Queue* queue)
 {
-    return 0;
+
+	if (queue->end = NULL)
+	{
+		return true;
+	}
+	return false;
+}
+
+void deleteQueue(Queue* queue)
+{
+	while (queue != NULL)
+	{
+		dequeue(queue);
+	}
 }
