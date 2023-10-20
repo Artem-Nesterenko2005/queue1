@@ -11,6 +11,17 @@ int enqueue(Queue** queue, int value)
     (*queue)->head = queueElem;
 }
 
+int dequeue(Queue** queue)
+{
+    if (*queue == NULL)
+    {
+        return 0;
+    }
+    QueueElem* ptr = (*queue)->end;
+    (*queue)->end = ptr->next;
+    return ptr->value;
+}
+
 int front(Queue* queue)
 {
     if (queue == NULL)
@@ -39,7 +50,7 @@ int back(Queue* queue)
 
 bool isEmpty(Queue* queue)
 {
-    if (queue->end = NULL)
+    if (queue->end == NULL)
     {
         return true;
     }
@@ -52,4 +63,5 @@ void deleteQueue(Queue* queue)
     {
         dequeue(queue);
     }
+    free(queue);
 }
